@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Candle Store</title>
+  <style>
+    body { font-family: Georgia, serif; background: #fff8f0; margin: 0; }
+    header { background: #5b3a29; color: white; padding: 20px; text-align: center; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; padding: 30px; justify-content: center; }
+    .card { background: white; border-radius: 10px; padding: 20px; width: 200px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-align: center; }
+    .price { color: #b5651d; font-weight: bold; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <header><h1>🕯️ Candle Store</h1><p>Handmade candles for every mood</p></header>
+  <div class="grid">
+    {% for p in products %}
+    <div class="card">
+      <h3>{{ p.name }}</h3>
+      <p>Scent: {{ p.scent }}</p>
+      <p class="price">₹{{ p.price }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
