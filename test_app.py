@@ -15,7 +15,7 @@ def test_products_api():
     response = get_client().get("/api/products")
     assert response.status_code == 200
     data = response.get_json()
-    assert len(data) == 4
+    assert len(data) == 5
     assert all("price" in product for product in data)
 
 
